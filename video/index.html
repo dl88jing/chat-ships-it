@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=1920, height=1080"/>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#09090b}
+#root{width:1920px;height:1080px;position:relative;font-family:Inter,system-ui,sans-serif;color:#fafafa}
+.scene{position:absolute;inset:0;background:
+  radial-gradient(1200px 700px at 20% -10%, rgba(145,70,255,.22), transparent 55%),
+  radial-gradient(900px 600px at 100% 110%, rgba(16,185,129,.12), transparent 50%),
+  #09090b}
+.kicker{position:absolute;left:96px;top:72px;font-size:22px;letter-spacing:.22em;text-transform:uppercase;color:#10b981;font-weight:600}
+h1{position:absolute;left:96px;top:140px;font-size:78px;line-height:1.02;letter-spacing:-.035em;font-weight:800;width:920px}
+.sub{position:absolute;left:96px;top:400px;font-size:28px;line-height:1.4;color:#a1a1aa;width:820px;font-weight:500}
+.shot-wrap{position:absolute;right:72px;top:120px;width:860px;height:620px;border-radius:20px;overflow:hidden;
+  border:1px solid rgba(63,63,70,.9);box-shadow:0 40px 100px rgba(0,0,0,.55), inset 0 0 0 1px rgba(255,255,255,.04);background:#000}
+.shot-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.caption{position:absolute;left:96px;right:96px;bottom:56px;display:flex;align-items:center;gap:18px}
+.caption .pill{background:rgba(24,24,27,.92);border:1px solid #3f3f46;border-radius:999px;padding:14px 28px;
+  font-size:26px;font-weight:600;color:#e4e4e7;backdrop-filter:blur(8px);max-width:1400px}
+.badge{margin-left:auto;font-size:20px;color:#71717a;font-weight:500;letter-spacing:.04em}
+.cta-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.cta-center .tag{font-size:32px;color:#a1a1aa;margin:18px 0 28px}
+.cta-center .urls{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:26px;color:#10b981;line-height:1.7}
+.cta-center .credit{margin-top:36px;font-size:20px;color:#71717a;letter-spacing:.08em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="67.612" data-width="1920" data-height="1080" data-fps="30">
+<section id="s0" class="clip scene" data-start="0.000" data-duration="13.286" data-track-index="0">
+<div class="kicker">HOOK</div>
+<h1>Chat wants to<br>ship features.</h1>
+<p class="sub">Overlays stay frozen. Polls are done. Codex becomes the mechanic.</p>
+<div class="shot-wrap" id="s0-shot"><img src="assets/shot-landing.png" alt=""/></div>
+<div class="caption"><div class="pill">Chat wants to ship features.</div><div class="badge">Chat Ships It · Green Robin Labs</div></div>
+</section><section id="s1" class="clip scene" data-start="13.286" data-duration="10.385" data-track-index="0">
+<div class="kicker">LOOP</div>
+<h1>Redeem.<br>Approve. Build.</h1>
+<p class="sub">Ship a Feature → !ship → human in the loop.</p>
+<div class="shot-wrap" id="s1-shot"><img src="assets/shot-dashboard.png" alt=""/></div>
+<div class="caption"><div class="pill">Redeem. Approve. Build.</div><div class="badge">Chat Ships It · Green Robin Labs</div></div>
+</section><section id="s2" class="clip scene" data-start="23.671" data-duration="12.305" data-track-index="0">
+<div class="kicker">LIVE</div>
+<h1>Codex builds<br>on the overlay.</h1>
+<p class="sub">Plan · streaming diff · tests · sandboxed hot-load.</p>
+<div class="shot-wrap" id="s2-shot"><img src="assets/shot-building.png" alt=""/></div>
+<div class="caption"><div class="pill">Codex builds live on the overlay.</div><div class="badge">Chat Ships It · Green Robin Labs</div></div>
+</section><section id="s3" class="clip scene" data-start="35.975" data-duration="15.782" data-track-index="0">
+<div class="kicker">REVEAL</div>
+<h1>Feature by<br>@Morgan.</h1>
+<p class="sub">Duck quacks on LUL. Remix. Revert. Patch notes.</p>
+<div class="shot-wrap" id="s3-shot"><img src="assets/shot-demo.png" alt=""/></div>
+<div class="caption"><div class="pill">Feature by chat.</div><div class="badge">Chat Ships It · Green Robin Labs</div></div>
+</section><section id="s4" class="clip scene" data-start="51.757" data-duration="15.855" data-track-index="0">
+<div class="cta-center" id="s4-inner">
+  <div class="kicker" style="position:static;margin-bottom:18px">CHAT SHIPS IT</div>
+  <h1 style="position:static;width:auto;font-size:96px;margin:0">Try the demo.</h1>
+  <div class="tag">Codex x TwitchCon · Green Robin Labs</div>
+  <div class="urls">chat-ships-it.vercel.app<br/>github.com/dl88jing/chat-ships-it</div>
+  <div class="credit">Feature by chat · Built with Codex</div>
+</div>
+<div class="caption"><div class="pill">Try the live demo.</div><div class="badge">Chat Ships It</div></div>
+</section>
+<audio id="vo1" src="assets/vo1.wav" data-start="0.000" data-duration="12.736" data-track-index="1" data-volume="1"></audio><audio id="vo2" src="assets/vo2.wav" data-start="13.286" data-duration="9.835" data-track-index="1" data-volume="1"></audio><audio id="vo3" src="assets/vo3.wav" data-start="23.671" data-duration="11.755" data-track-index="1" data-volume="1"></audio><audio id="vo4" src="assets/vo4.wav" data-start="35.975" data-duration="15.232" data-track-index="1" data-volume="1"></audio><audio id="vo5" src="assets/vo5.wav" data-start="51.757" data-duration="14.955" data-track-index="1" data-volume="1"></audio>
+<script>
+const tl=gsap.timeline({paused:true});
+tl.from("#s0 .kicker, #s0 h1, #s0 .sub, #s0 .pill, #s0 .badge",{opacity:0,y:28,duration:0.7,stagger:0.1,ease:"power2.out"},0.120);
+tl.from("#s0-shot",{x:70,opacity:0,duration:1.0,ease:"power3.out"},0.280);
+tl.to("#s0-shot",{scale:1.04,duration:11.286,ease:"none"},1.100);
+tl.from("#s1 .kicker, #s1 h1, #s1 .sub, #s1 .pill, #s1 .badge",{opacity:0,y:28,duration:0.7,stagger:0.1,ease:"power2.out"},13.406);
+tl.from("#s1-shot",{x:70,opacity:0,duration:1.0,ease:"power3.out"},13.566);
+tl.to("#s1-shot",{scale:1.04,duration:8.385,ease:"none"},14.386);
+tl.from("#s2 .kicker, #s2 h1, #s2 .sub, #s2 .pill, #s2 .badge",{opacity:0,y:28,duration:0.7,stagger:0.1,ease:"power2.out"},23.791);
+tl.from("#s2-shot",{x:70,opacity:0,duration:1.0,ease:"power3.out"},23.951);
+tl.to("#s2-shot",{scale:1.04,duration:10.305,ease:"none"},24.771);
+tl.from("#s3 .kicker, #s3 h1, #s3 .sub, #s3 .pill, #s3 .badge",{opacity:0,y:28,duration:0.7,stagger:0.1,ease:"power2.out"},36.095);
+tl.from("#s3-shot",{x:70,opacity:0,duration:1.0,ease:"power3.out"},36.255);
+tl.to("#s3-shot",{scale:1.04,duration:13.782,ease:"none"},37.075);
+tl.from("#s4 .kicker, #s4 h1, #s4 .tag, #s4 .urls, #s4 .credit, #s4 .pill, #s4 .badge",{opacity:0,y:28,duration:0.7,stagger:0.1,ease:"power2.out"},51.877);
+tl.from("#s4-inner",{opacity:0,scale:0.96,duration:0.9,ease:"power3.out"},51.907);
+window.__timelines = window.__timelines || {};
+window.__timelines["main"]=tl; tl.seek(0);
+</script>
+</div>
+</body>
+</html>

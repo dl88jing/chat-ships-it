@@ -1,0 +1,6 @@
+title = "chat-ships-it"
+[allowlist]
+  paths = [
+    '''(.*?)package-lock\.json$''',
+    '''(.*?)video/assets/.*\.wav$''',
+  ]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "vo1",
+    "file": "vo1.wav",
+    "caption": "Chat wants to ship features.",
+    "text": "On Twitch, chat wants to play along — but most overlays stay frozen all stream. Polls and Twitch Plays have been done. Chat Ships It does something new: it puts OpenAI Codex on screen as the game mechanic."
+  },
+  {
+    "id": "vo2",
+    "file": "vo2.wav",
+    "caption": "Redeem. Approve. Build.",
+    "text": "A viewer redeems Ship a Feature with one line — add a rubber duck that quacks when someone says LUL. A mod hits ship. Nothing deploys without a human in the loop."
+  },
+  {
+    "id": "vo3",
+    "file": "vo3.wav",
+    "caption": "Codex builds live on the overlay.",
+    "text": "On the OBS overlay, the Codex panel lights up. You watch the plan steps, the diff streaming, and the test light flip green. About a minute later, the widget hot-loads into a sandboxed iframe."
+  },
+  {
+    "id": "vo4",
+    "file": "vo4.wav",
+    "caption": "Feature by chat.",
+    "text": "Morgan's duck quacks on every LUL. Chat can remix widgets. Mods can revert. A patch-notes ticker credits every ship. Safe by design: no network in the sandbox, size budgets, and OpenAI moderation on prompts."
+  },
+  {
+    "id": "vo5",
+    "file": "vo5.wav",
+    "caption": "Try the live demo.",
+    "text": "We built the product with Codex, and Codex is what chat is watching. Open chat-ships-it.vercel.app, try the interactive demo, and star the repo on GitHub. Chat Ships It, by Green Robin Labs, for the Codex x TwitchCon Hackathon."
+  }
+]
