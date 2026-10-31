@@ -48,7 +48,7 @@ Open [http://localhost:3000/demo](http://localhost:3000/demo).
 Narrated 60–120s demo (HyperFrames + Kokoro):
 
 - In-repo: [`video/renders/chat-ships-it-demo.mp4`](./video/renders/chat-ships-it-demo.mp4)
-- GitHub Release: see [Releases](https://github.com/dl88jing/chat-ships-it/releases) asset `chat-ships-it-demo.mp4`
+- GitHub Release: [v1.0.0 `chat-ships-it-demo.mp4`](https://github.com/dl88jing/chat-ships-it/releases/download/v1.0.0/chat-ships-it-demo.mp4)
 - **Devpost requires a public YouTube link** — upload the release MP4 to YouTube (public or unlisted) and paste that URL on the submission form.
 
 ## Codex
