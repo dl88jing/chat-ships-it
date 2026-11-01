@@ -23,15 +23,23 @@ Side threads / `codex exec`-style tasks:
 - Validator notes (size budget, CSP, Playwright smoke test checklist)
 - Pitch deck outline and demo narration
 
-### Codex session ID
+### Codex session IDs (evidence for Devpost)
 
-Type `/status` in the Codex thread where most of the build happened and paste the session ID below.
+Session IDs are not secrets. Paste these on the Devpost form and keep them in this file.
 
 ```
-CODEX_SESSION_ID: <PASTE_FROM_/status>
+CODEX_SESSION_ID: 01a19592-cb14-7af0-bf46-1cec8f9b2a13
 ```
 
-> If this line still says `PASTE`, open Codex on the machine that built the repo, run `/status` in the MAIN thread, and update this file + the Devpost form before final submit. Session IDs are not secrets.
+| Session ID | When (America/Los_Angeles) | Prompt (summary) | What Codex built |
+|------------|----------------------------|------------------|------------------|
+| `01a19592-cb14-7af0-bf46-1cec8f9b2a13` | Sat Oct 31, 2026 ~10:26–10:27 PM PT | Non-interactive `codex exec --dangerously-bypass-approvals-and-sandbox` in-repo: add a fifth DEMO_MODE overlay widget, extract reusable sandbox validation, add `npm test`, keep under 15 minutes | **Sub Goal Thermometer** widget (`sub-goal`); `src/lib/sandbox-validate.ts` (`validateWidgetHtml`); wired into `build-server.ts`; `scripts/sandbox-validate.test.mjs` (4 tests); `npm test` script. Commit: `6810805`. |
+
+Prompt used for the recorded session (abridged):
+
+> Add one new DEMO_MODE overlay widget template that chat can request (Sub Goal Thermometer, id `sub-goal`), harden sandbox validation into a reusable module (`validateWidgetHtml` rejecting fetch/XHR/WebSocket/cookie/eval/Function/script-src/import/sendBeacon and >12KB HTML), wire it through `build-server.ts`, add Node tests + `npm test`, run tests and build until green. Do not commit secrets; affiliation Green Robin Labs; no push.
+
+Verification for that session: `npm test` (4 pass) and `npm run build` succeeded before commit.
 
 ## 2. Runtime — Codex ships chat’s features
 
@@ -43,7 +51,7 @@ When a mod runs `!ship`:
 4. Tests light turns green; widget HTML hot-loads into a sandboxed iframe.
 5. Patch-notes ticker credits the viewer: **Feature by @viewer**.
 
-With `OPENAI_API_KEY` set, `/api/build` generates fresh HTML server-side. Without it, curated templates still play the full Codex UX so the stream never stalls on quota.
+With `OPENAI_API_KEY` set, `/api/build` generates fresh HTML server-side. Without it, curated templates still play the full Codex UX so the stream never stalls on quota. DEMO_MODE templates now include rubber duck, raid confetti, emote combo, hype pill, and **sub goal thermometer**.
 
 ## 3. What to show judges (≤3 min video)
 
@@ -57,6 +65,8 @@ With `OPENAI_API_KEY` set, `/api/build` generates fresh HTML server-side. Withou
 | 2:10 | `!revert` |
 | 2:25 | This file + MAIN thread `/status` session ID |
 | 2:50 | Outro — repo + live demo URL |
+
+Demo video (YouTube): https://youtu.be/ghyZRheHwsg
 
 ## 4. AGENTS.md
 

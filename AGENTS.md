@@ -26,6 +26,7 @@ Iframe → parent:
 - `src/lib/widgets.ts` — DEMO_MODE templates + materialize
 - `src/lib/demo-store.ts` — client demo EventSub/chat/build loop
 - `src/lib/build-server.ts` — server build (OpenAI if keyed, else template)
+- `src/lib/sandbox-validate.ts` — forbidden-API + size checks for widget HTML
 - `docs/CODEX.md` — how Codex was used (required for judges)
 
 ## Commands
@@ -33,4 +34,5 @@ Iframe → parent:
 npm install
 npm run dev
 npm run build
+npm test
 ```

@@ -22,6 +22,8 @@ Most hackathon entries bolt AI onto chat. **Chat Ships It makes Codex the game m
 - Patch-notes ticker (“Feature by @viewer”)
 - **DEMO_MODE** mock Twitch auth (no Client ID required to try)
 - Optional `OPENAI_API_KEY` for live `/api/build` generation
+- DEMO_MODE widget pack includes rubber duck, raid confetti, emote combo, hype pill, **sub goal thermometer**
+- Shared `validateWidgetHtml` sandbox scan (forbidden APIs + size) with `npm test`
 
 ## Quick start
 
@@ -45,11 +47,11 @@ Open [http://localhost:3000/demo](http://localhost:3000/demo).
 
 ## Demo video
 
-Narrated 60–120s demo (HyperFrames + Kokoro):
+Narrated demo (HyperFrames + Kokoro):
 
+- **YouTube:** https://youtu.be/ghyZRheHwsg
 - In-repo: [`video/renders/chat-ships-it-demo.mp4`](./video/renders/chat-ships-it-demo.mp4)
 - GitHub Release: [v1.0.0 `chat-ships-it-demo.mp4`](https://github.com/dl88jing/chat-ships-it/releases/download/v1.0.0/chat-ships-it-demo.mp4)
-- **Devpost requires a public YouTube link** — upload the release MP4 to YouTube (public or unlisted) and paste that URL on the submission form.
 
 ## Codex
 
