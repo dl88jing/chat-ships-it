@@ -17,12 +17,13 @@ Viewers redeem Ship a Feature. Codex builds a sandboxed Twitch overlay widget li
 https://chat-ships-it.vercel.app
 
 ## Demo video (YouTube — REQUIRED)
-**STATUS: NEEDS HUMAN** — Devpost requires a public or unlisted YouTube URL (max 3 min).  
-Upload this file, then paste the YouTube link on the form:
+https://youtu.be/ghyZRheHwsg
 
-- Local / repo: `chat-ships-it/video/renders/chat-ships-it-demo.mp4` (~68s, 1920×1080, narrated)
-- GitHub Release asset: https://github.com/dl88jing/chat-ships-it/releases/download/v1.0.0/chat-ships-it-demo.mp4
-- Release page: https://github.com/dl88jing/chat-ships-it/releases/tag/v1.0.0
+Narrated HyperFrames + Kokoro demo with live-app screen recording of https://chat-ships-it.vercel.app (v1.1.0 release includes refreshed MP4 when available).
+
+- YouTube: https://youtu.be/ghyZRheHwsg
+- Local / repo: `chat-ships-it/video/renders/chat-ships-it-demo.mp4` (and `chat-ships-it-demo-v2.mp4` after screen-recording rebuild)
+- GitHub Release: https://github.com/dl88jing/chat-ships-it/releases/download/v1.0.0/chat-ships-it-demo.mp4
 
 Suggested YouTube title: `Chat Ships It — Codex builds Twitch overlay widgets live (Codex x TwitchCon)`  
 Suggested description: include live demo URL + repo URL; no copyrighted music (Kokoro TTS only).
@@ -126,13 +127,9 @@ See full write-up: https://github.com/dl88jing/chat-ships-it/blob/main/docs/CODE
 
 ### Codex Session ID (REQUIRED on Devpost form)
 ```
-CODEX_SESSION_ID: <PASTE_FROM_/status>
+CODEX_SESSION_ID: 01a19592-cb14-7af0-bf46-1cec8f9b2a13
 ```
-**STATUS: NEEDS HUMAN** — Sign in to Codex / ChatGPT, open the MAIN build thread for this project, type `/status`, paste the session ID into:
-1. This field on Devpost
-2. `docs/CODEX.md` and `public/docs/CODEX.md` in the repo (then commit + push)
-
-Session IDs are not secrets. Do **not** use the smoke-test session on the build box (`01a179e7-…` under `/tmp/codex-smoke`) — that is unrelated.
+Recorded via non-interactive `codex exec` on the build box (ChatGPT login). This session added the **Sub Goal Thermometer** widget, `validateWidgetHtml` sandbox module, and `npm test`. Full prompt + summary: https://github.com/dl88jing/chat-ships-it/blob/main/docs/CODEX.md
 
 ---
 
@@ -145,8 +142,8 @@ Session IDs are not secrets. Do **not** use the smoke-test session on the build 
 | "Built with" / technologies | openai-codex, openai, twitch, twitch-api, eventsub, nextjs, react, typescript, vercel, tailwindcss, hyperframes, kokoro |
 | GitHub / GitLab / Bitbucket URL | https://github.com/dl88jing/chat-ships-it |
 | Demo / website URL | https://chat-ships-it.vercel.app |
-| Demo video URL | **(YouTube URL after upload)** |
-| Codex Session ID | **(paste from `/status`)** |
+| Demo video URL | https://youtu.be/ghyZRheHwsg |
+| Codex Session ID | 01a19592-cb14-7af0-bf46-1cec8f9b2a13 |
 | How did you use Codex? | See “How we used Codex” section above + `docs/CODEX.md`. Codex authored the product and is the on-stream mechanic. |
 | Testing instructions | `npm i && cp .env.example .env.local && npm run dev` → open `/demo`. Or visit https://chat-ships-it.vercel.app/demo. Set `DEMO_MODE=true` (default). Optional: `OPENAI_API_KEY`, `TWITCH_CLIENT_ID`, `TWITCH_CLIENT_SECRET`. Never commit secrets. |
 | Team / individual | Individual (dl88jing) · Green Robin Labs / Northbridge |
@@ -167,15 +164,14 @@ Session IDs are not secrets. Do **not** use the smoke-test session on the build 
 - Demo MP4 direct: https://github.com/dl88jing/chat-ships-it/releases/download/v1.0.0/chat-ships-it-demo.mp4
 - Pitch PDF: https://github.com/dl88jing/chat-ships-it/releases/download/v1.0.0/Chat-Ships-It-Pitch.pdf
 - Cover: https://github.com/dl88jing/chat-ships-it/releases/download/v1.0.0/cover.png
-- YouTube: **TBD — human upload**
-- Codex session ID: **TBD — human `/status`**
+- YouTube: https://youtu.be/ghyZRheHwsg
+- Codex session ID: 01a19592-cb14-7af0-bf46-1cec8f9b2a13
 
 ---
 
-## Human remaining (cannot automate without Dylan’s accounts)
+## Human remaining (paste into Devpost + optional polish)
 
-1. **YouTube** — upload `chat-ships-it-demo.mp4` (public or unlisted), paste URL on Devpost.
-2. **Codex `/status`** — MAIN thread session ID → Devpost + `docs/CODEX.md`.
-3. **Devpost submit** — log in as dl88jing, create/enter Submission (not draft), attach cover + gallery, fill every story section from this file, hit Submit before Mon Nov 2 2:00 PM PT.
-4. Optional: register Twitch app + set Vercel env (`TWITCH_*`, `OPENAI_API_KEY`, `DEMO_MODE=false`) for a real-channel clip in the YouTube video.
-5. After submit: freeze this repo until Nov 15; iterate in a fork/copy.
+1. **Devpost submit** — log in as dl88jing, create/enter Submission (not draft), attach cover + gallery + pitch, paste every story section from this file, YouTube https://youtu.be/ghyZRheHwsg, Codex session `01a19592-cb14-7af0-bf46-1cec8f9b2a13`, hit Submit before Mon Nov 2 2:00 PM PT.
+2. If a newer screen-recording demo (`chat-ships-it-demo-v2.mp4` / release v1.1.0) is ready, replace the YouTube upload with that file (keep the same URL or update Devpost).
+3. Optional: register Twitch app + set Vercel env (`TWITCH_*`, `OPENAI_API_KEY`, `DEMO_MODE=false`) for a real-channel clip.
+4. After submit: freeze this repo until Nov 15; iterate in a fork/copy.
