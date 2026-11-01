@@ -17,16 +17,17 @@ Viewers redeem Ship a Feature. Codex builds a sandboxed Twitch overlay widget li
 https://chat-ships-it.vercel.app
 
 ## Demo video (YouTube — REQUIRED)
-https://youtu.be/ghyZRheHwsg
+**YouTube:** https://youtu.be/ghyZRheHwsg  
+(Replace with the new upload of v1.1.0 screen-recording demo after publishing.)
 
-Narrated HyperFrames + Kokoro demo with live-app screen recording of https://chat-ships-it.vercel.app (v1.1.0 release includes refreshed MP4 when available).
-
-- YouTube: https://youtu.be/ghyZRheHwsg
-- Local / repo: `chat-ships-it/video/renders/chat-ships-it-demo.mp4` (and `chat-ships-it-demo-v2.mp4` after screen-recording rebuild)
-- GitHub Release: https://github.com/dl88jing/chat-ships-it/releases/download/v1.0.0/chat-ships-it-demo.mp4
+- Local / repo: `chat-ships-it/video/renders/chat-ships-it-demo-v2.mp4` (~89s, 1920×1080, narrated; ≥60% live app screen recording)
+- GitHub Release asset: https://github.com/dl88jing/chat-ships-it/releases/download/v1.1.0/chat-ships-it-demo-v2.mp4
+- Release page: https://github.com/dl88jing/chat-ships-it/releases/tag/v1.1.0
+- Prior stills cut: `video/renders/chat-ships-it-demo.mp4` (v1.0.0)
 
 Suggested YouTube title: `Chat Ships It — Codex builds Twitch overlay widgets live (Codex x TwitchCon)`  
-Suggested description: include live demo URL + repo URL; no copyrighted music (Kokoro TTS only).
+Suggested description: include live demo URL + repo URL; no copyrighted music (Kokoro TTS only). Screen footage recorded from https://chat-ships-it.vercel.app with Playwright.
+
 
 ## Repository
 https://github.com/dl88jing/chat-ships-it  

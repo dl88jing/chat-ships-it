@@ -1,0 +1,38 @@
+[
+  {
+    "id": "vo_title",
+    "file": "vo-v2/vo_title.wav",
+    "caption": "Chat Ships It",
+    "text": "Chat Ships It. Viewers redeem Ship a Feature. OpenAI Codex builds a sandboxed Twitch overlay widget — live on stream."
+  },
+  {
+    "id": "vo_landing",
+    "file": "vo-v2/vo_landing.wav",
+    "caption": "Open the live demo.",
+    "text": "Here is the real live app on Vercel. We open chat-ships-it.vercel.app, then click into the interactive stream demo — DEMO_MODE, no Twitch Client ID required."
+  },
+  {
+    "id": "vo_ship",
+    "file": "vo-v2/vo_ship.wav",
+    "caption": "Redeem. !ship. Codex builds.",
+    "text": "A simulated viewer redeems a rubber duck that quacks on LUL. A mod clicks ship. Watch Codex plan, stream the diff, and flip the test light green. The widget hot-loads onto the overlay, credited to Morgan. Chat types LUL — and the duck quacks."
+  },
+  {
+    "id": "vo_raid",
+    "file": "vo-v2/vo_raid.wav",
+    "caption": "Ship confetti. Trigger a raid.",
+    "text": "Next, Avery redeems raid confetti. Ship again. Codex builds in the sandbox. Then we fire a raid and a cheer — confetti bursts on the simulated stream. Safe by design: no network inside the iframe."
+  },
+  {
+    "id": "vo_dash",
+    "file": "vo-v2/vo_dash.wav",
+    "caption": "Dashboard and OBS overlay.",
+    "text": "The streamer dashboard and the transparent OBS overlay at slash overlay slash northbridge complete the loop — queue, build panel, and widgets ready for a real browser source."
+  },
+  {
+    "id": "vo_outro",
+    "file": "vo-v2/vo_outro.wav",
+    "caption": "Try it yourself.",
+    "text": "We built the product with Codex, and Codex is the game mechanic. Try the demo at chat-ships-it.vercel.app. Star the repo on GitHub. Chat Ships It, by Green Robin Labs, for the Codex x TwitchCon Hackathon."
+  }
+]

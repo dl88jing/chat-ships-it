@@ -49,3 +49,5 @@ video/node_modules/
 video/renders/frames/
 video/render*.log
 video/.venv/
+video/renders/frames-v2/
+video/assets/screen/*.webm

@@ -50,8 +50,8 @@ Open [http://localhost:3000/demo](http://localhost:3000/demo).
 Narrated demo (HyperFrames + Kokoro):
 
 - **YouTube:** https://youtu.be/ghyZRheHwsg
-- In-repo: [`video/renders/chat-ships-it-demo.mp4`](./video/renders/chat-ships-it-demo.mp4)
-- GitHub Release: [v1.0.0 `chat-ships-it-demo.mp4`](https://github.com/dl88jing/chat-ships-it/releases/download/v1.0.0/chat-ships-it-demo.mp4)
+- In-repo: [`video/renders/chat-ships-it-demo-v2.mp4 (screen-recording walkthrough; also `chat-ships-it-demo.mp4` v1)`](./video/renders/chat-ships-it-demo.mp4)
+- GitHub Release: [v1.0.0 `chat-ships-it-demo.mp4`](https://github.com/dl88jing/chat-ships-it/releases/download/v1.1.0/chat-ships-it-demo-v2.mp4)
 
 ## Codex
 

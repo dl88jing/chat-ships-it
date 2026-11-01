@@ -71,3 +71,13 @@ Demo video (YouTube): https://youtu.be/ghyZRheHwsg
 ## 4. AGENTS.md
 
 Repo-root `AGENTS.md` is the contract Codex (and other agents) follow: no secrets, sandbox rules, widget API, pseudonyms.
+
+
+## Demo video v1.1.0 (screen recording)
+
+After the Codex build pass (`01a19592-cb14-7af0-bf46-1cec8f9b2a13`), we recorded a real walkthrough of the live app with Playwright (headless Chromium `recordVideo` 1920×1080, visible cursor overlay, realistic typing) and rebuilt the HyperFrames composition so screen footage is ~75% of runtime with Kokoro narration.
+
+- Clips: `video/assets/screen/01-landing-demo-pad.mp4` … `04-dashboard-overlay.mp4`
+- Narration: `video/assets/vo-v2/*.wav` (Kokoro `af_heart`)
+- Render: `video/renders/chat-ships-it-demo-v2.mp4` (~88.8s, 1920×1080)
+- Release: `v1.1.0`
