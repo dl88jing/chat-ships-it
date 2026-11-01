@@ -101,6 +101,19 @@ window.addEventListener('message',(ev)=>{
 window.parent.postMessage({type:'widget-ready', id:'hype-pill'}, '*');
 </script></body></html>`;
 
+const subGoalHtml = `<!doctype html><html><head><style>
+html,body{margin:0;background:transparent;overflow:hidden;font-family:system-ui,sans-serif;color:#fff}
+#hud{position:fixed;right:28px;bottom:28px;width:170px;padding:15px;border:1px solid #c4a5ff;border-radius:20px;background:linear-gradient(145deg,rgba(45,20,84,.94),rgba(115,42,190,.92));box-shadow:0 8px 30px #9146ff66;text-align:center}
+.title{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.tube{height:100px;width:26px;margin:12px auto 8px;border:3px solid #eadcff;border-radius:18px 18px 12px 12px;background:#291345;position:relative;overflow:hidden;transform:rotate(180deg)}
+#fill{position:absolute;inset:auto 0 0;height:12%;background:linear-gradient(#f4a7ff,#9146ff);transition:height .35s;border-radius:12px}.count{font-size:12px;font-weight:700}.tag{margin-top:8px;font-size:10px;opacity:.8}
+</style></head><body><div id="hud"><div class="title">Sub goal</div><div class="tube"><div id="fill"></div></div><div class="count" id="count">12% · keep it going!</div><div class="tag">by @viewer</div></div>
+<script>
+let progress=12;const fill=document.getElementById('fill'),count=document.getElementById('count');
+function boost(amount){progress=Math.min(100,progress+amount);fill.style.height=progress+'%';count.textContent=progress+'% · '+(progress===100?'GOAL HIT! 🎉':'keep it going!');}
+window.addEventListener('message',ev=>{const m=ev.data||{};if(m.type==='chat'&&/\\bSUB\\b|GOAL|GG/i.test(m.text||''))boost(8);if(m.type==='cheer')boost(Math.max(3,Math.min(15,Math.ceil((m.bits||1)/100))));if(m.type==='raid')boost(Math.max(5,Math.min(20,Math.ceil((m.viewers||1)/10))));});
+window.parent.postMessage({type:'widget-ready',id:'sub-goal'},'*');
+</script></body></html>`;
+
 export const TEMPLATES: WidgetTemplate[] = [
   {
     id: "rubber-duck",
@@ -182,9 +195,31 @@ export const TEMPLATES: WidgetTemplate[] = [
     ],
     html: tickerBoostHtml,
   },
+  {
+    id: "sub-goal",
+    name: "Sub Goal Thermometer",
+    match: /sub|goal|thermo|subscriber/i,
+    prompt: "subscriber goal thermometer that fills when chat says SUB or GOAL",
+    credit: "viewer",
+    plan: [
+      "Build a transparent Twitch-purple goal HUD",
+      "Fill thermometer on SUB, GOAL, or GG chat messages",
+      "Add smaller cheer and raid progress boosts",
+      "Send widget-ready on the parent message bus",
+      "Validate the sandbox and size budget",
+    ],
+    diff: [
+      { kind: "add", text: "+ Sub Goal Thermometer HUD with animated fill" },
+      { kind: "add", text: "+ chat SUB|GOAL|GG, cheer, and raid triggers" },
+      { kind: "add", text: "+ widget-ready id: sub-goal; by @viewer credit" },
+    ],
+    html: subGoalHtml,
+  },
 ];
 
 export function pickTemplate(prompt: string): WidgetTemplate {
+  const subGoal = TEMPLATES.find((t) => t.id === "sub-goal");
+  if (subGoal?.match.test(prompt)) return subGoal;
   const hit = TEMPLATES.find((t) => t.match.test(prompt));
   return hit ?? TEMPLATES[0];
 }

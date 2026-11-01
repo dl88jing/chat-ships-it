@@ -1,4 +1,5 @@
 import { pickTemplate, materializeWidget } from "./widgets";
+import { validateWidgetHtml } from "./sandbox-validate";
 
 export type BuildResult = {
   mode: "demo" | "openai";
@@ -19,13 +20,15 @@ export async function buildWidget(prompt: string, viewer: string): Promise<Build
   const template = pickTemplate(prompt);
   const apiKey = process.env.OPENAI_API_KEY;
 
+  const demoResult = (): BuildResult => {
+    const widget = materializeWidget(template, viewer, prompt);
+    const validation = validateWidgetHtml(widget.html);
+    if (!validation.ok) throw new Error(`Invalid demo widget: ${validation.errors.join(", ")}`);
+    return { mode: "demo", widget, plan: template.plan, diff: template.diff };
+  };
+
   if (!apiKey) {
-    return {
-      mode: "demo",
-      widget: materializeWidget(template, viewer, prompt),
-      plan: template.plan,
-      diff: template.diff,
-    };
+    return demoResult();
   }
 
   try {
@@ -56,10 +59,8 @@ export async function buildWidget(prompt: string, viewer: string): Promise<Build
     if (!html.includes("<html") && !html.includes("<!doctype")) {
       throw new Error("invalid html");
     }
-    // Basic forbidden API scan
-    if (/fetch\s*\(|XMLHttpRequest|WebSocket|document\.cookie/i.test(html)) {
-      throw new Error("forbidden api");
-    }
+    const validation = validateWidgetHtml(html);
+    if (!validation.ok) throw new Error(validation.errors.join(", "));
     return {
       mode: "openai",
       widget: {
@@ -82,11 +83,6 @@ export async function buildWidget(prompt: string, viewer: string): Promise<Build
       ],
     };
   } catch {
-    return {
-      mode: "demo",
-      widget: materializeWidget(template, viewer, prompt),
-      plan: template.plan,
-      diff: template.diff,
-    };
+    return demoResult();
   }
 }
