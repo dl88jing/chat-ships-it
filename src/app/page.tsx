@@ -71,6 +71,12 @@ export default function HomePage() {
               >
                 OBS overlay
               </Link>
+              <Link
+                href="/live?channel=xqc"
+                className="rounded-xl border border-red-500/40 bg-red-500/10 px-5 py-3 text-sm font-semibold text-red-100 hover:bg-red-500/20"
+              >
+                Live Twitch chat
+              </Link>
             </div>
             <p className="mt-4 text-xs text-zinc-500">
               Demo runs in <code>DEMO_MODE</code> with mock Twitch auth. No Twitch Client ID required to

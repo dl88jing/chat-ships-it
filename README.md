@@ -4,7 +4,7 @@
 
 **Green Robin Labs · Northbridge** · Codex x TwitchCon Hackathon 2026 · MIT
 
-[Live demo](https://chat-ships-it.vercel.app) · [Interactive stream](https://chat-ships-it.vercel.app/demo) · [How we used Codex](./docs/CODEX.md)
+[Live demo](https://chat-ships-it.vercel.app) · [Real Twitch chat](https://chat-ships-it.vercel.app/live?channel=xqc) · [Interactive stream](https://chat-ships-it.vercel.app/demo) · [How we used Codex](./docs/CODEX.md)
 
 ![Chat Ships It](./assets/cover.png)
 
@@ -20,10 +20,24 @@ Most hackathon entries bolt AI onto chat. **Chat Ships It makes Codex the game m
 - OBS browser source at `/overlay/[channel]` (transparent)
 - Streamer dashboard + full interactive `/demo`
 - Patch-notes ticker (“Feature by @viewer”)
+- **Real Twitch chat ingest** via anonymous IRC on `/live?channel=` (no keys)
 - **DEMO_MODE** mock Twitch auth (no Client ID required to try)
 - Optional `OPENAI_API_KEY` for live `/api/build` generation
 - DEMO_MODE widget pack includes rubber duck, raid confetti, emote combo, hype pill, **sub goal thermometer**
 - Shared `validateWidgetHtml` sandbox scan (forbidden APIs + size) with `npm test`
+
+## Real Twitch chat (no keys needed)
+
+Connect anonymously to Twitch IRC from the browser — **no Client ID, no OAuth, no secrets**.
+
+1. Open [`/live?channel=<name>`](https://chat-ships-it.vercel.app/live?channel=xqc) (also works as an OBS browser source).
+2. The page dials `wss://irc-ws.chat.twitch.tv:443` with `PASS SCHMOOPIIE` + `NICK justinfan…`, requests tags/commands, and `JOIN`s the channel.
+3. Real `PRIVMSG` lines (with `display-name`) feed the chat panel and the chat-vote tally (`1` / `2` / `3` or `!vote N`; `!ship` ships the leader).
+4. Badge shows **LIVE · twitch.tv/&lt;channel&gt;** plus IRC connection status.
+
+Verify locally: `npm run verify:twitch -- xqc`
+
+**Still simulated without keys:** widget HTML uses curated Codex templates when `OPENAI_API_KEY` is unset; channel-point EventSub needs a Twitch app (see [`docs/WORKER.md`](./docs/WORKER.md)).
 
 ## Quick start
 
