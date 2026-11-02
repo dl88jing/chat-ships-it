@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --experimental-strip-types --test scripts/sandbox-validate.test.mjs scripts/twitch-irc-parse.test.mjs",
+    "test": "node --experimental-strip-types --test scripts/sandbox-validate.test.mjs scripts/twitch-irc-parse.test.mjs scripts/profanity.test.mjs",
     "verify:twitch": "node --experimental-strip-types scripts/verify-twitch-irc.mjs"
   },
   "dependencies": {
@@ -31,5 +31,5 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   },
-  "description": "Chat Ships It — Codex builds Twitch overlay widgets live from chat"
+  "description": "Chat Ships It \u2014 Codex builds Twitch overlay widgets live from chat"
 }

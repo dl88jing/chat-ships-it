@@ -11,6 +11,7 @@ import { useChannel } from "@/components/useChannel";
 import { approveAndBuild, pushChat, redeemFeature } from "@/lib/demo-store";
 import { connectTwitchChat, type TwitchChatStatus } from "@/lib/twitch-chat-client";
 import { parseVoteIntent } from "@/lib/twitch-irc";
+import { maskProfanity } from "@/lib/profanity";
 import type { ChatMessage } from "@/lib/types";
 
 const OPTIONS = [
@@ -89,16 +90,17 @@ function LiveInner() {
       onStatus: (s) => setStatus(s),
       onMessage: (msg) => {
         const id = `${msg.user}-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
+        const safeText = maskProfanity(msg.text);
         const chatMsg: ChatMessage = {
           id,
           user: msg.displayName || msg.user,
-          text: msg.text,
+          text: safeText,
           color: msg.color || "#9146FF",
           at: Date.now(),
         };
         setLiveChat((prev) => [...prev.slice(-60), chatMsg]);
-        // Feed existing chat-vote / widget bus
-        pushChat(chatMsg.user, chatMsg.text, chatMsg.color);
+        // Feed existing chat-vote / widget bus (masked for overlay safety)
+        pushChat(chatMsg.user, safeText, chatMsg.color);
 
         const intent = parseVoteIntent(msg.text);
         if (intent.kind === "vote") {
