@@ -17,7 +17,7 @@ Viewers redeem Ship a Feature. Codex builds a sandboxed Twitch overlay widget li
 https://chat-ships-it.vercel.app
 
 ## Demo video (YouTube — REQUIRED)
-**YouTube:** https://youtu.be/ghyZRheHwsg  
+**YouTube:** https://youtu.be/dPa2fA3ui2Y  
 (Replace with the new upload of v1.1.0 screen-recording demo after publishing.)
 
 - Local / repo: `chat-ships-it/video/renders/chat-ships-it-demo-v2.mp4` (~89s, 1920×1080, narrated; ≥60% live app screen recording)
@@ -143,7 +143,7 @@ Recorded via non-interactive `codex exec` on the build box (ChatGPT login). This
 | "Built with" / technologies | openai-codex, openai, twitch, twitch-api, eventsub, nextjs, react, typescript, vercel, tailwindcss, hyperframes, kokoro |
 | GitHub / GitLab / Bitbucket URL | https://github.com/dl88jing/chat-ships-it |
 | Demo / website URL | https://chat-ships-it.vercel.app |
-| Demo video URL | https://youtu.be/ghyZRheHwsg |
+| Demo video URL | https://youtu.be/dPa2fA3ui2Y |
 | Codex Session ID | 01a19592-cb14-7af0-bf46-1cec8f9b2a13 |
 | How did you use Codex? | See “How we used Codex” section above + `docs/CODEX.md`. Codex authored the product and is the on-stream mechanic. |
 | Testing instructions | `npm i && cp .env.example .env.local && npm run dev` → open `/demo`. Or visit https://chat-ships-it.vercel.app/demo. Set `DEMO_MODE=true` (default). Optional: `OPENAI_API_KEY`, `TWITCH_CLIENT_ID`, `TWITCH_CLIENT_SECRET`. Never commit secrets. |
@@ -165,14 +165,14 @@ Recorded via non-interactive `codex exec` on the build box (ChatGPT login). This
 - Demo MP4 direct: https://github.com/dl88jing/chat-ships-it/releases/download/v1.0.0/chat-ships-it-demo.mp4
 - Pitch PDF: https://github.com/dl88jing/chat-ships-it/releases/download/v1.0.0/Chat-Ships-It-Pitch.pdf
 - Cover: https://github.com/dl88jing/chat-ships-it/releases/download/v1.0.0/cover.png
-- YouTube: https://youtu.be/ghyZRheHwsg
+- YouTube: https://youtu.be/dPa2fA3ui2Y
 - Codex session ID: 01a19592-cb14-7af0-bf46-1cec8f9b2a13
 
 ---
 
 ## Human remaining (paste into Devpost + optional polish)
 
-1. **Devpost submit** — log in as dl88jing, create/enter Submission (not draft), attach cover + gallery + pitch, paste every story section from this file, YouTube https://youtu.be/ghyZRheHwsg, Codex session `01a19592-cb14-7af0-bf46-1cec8f9b2a13`, hit Submit before Mon Nov 2 2:00 PM PT.
+1. **Devpost submit** — log in as dl88jing, create/enter Submission (not draft), attach cover + gallery + pitch, paste every story section from this file, YouTube https://youtu.be/dPa2fA3ui2Y, Codex session `01a19592-cb14-7af0-bf46-1cec8f9b2a13`, hit Submit before Mon Nov 2 2:00 PM PT.
 2. If a newer screen-recording demo (`chat-ships-it-demo-v2.mp4` / release v1.1.0) is ready, replace the YouTube upload with that file (keep the same URL or update Devpost).
 3. Optional: register Twitch app + set Vercel env (`TWITCH_*`, `OPENAI_API_KEY`, `DEMO_MODE=false`) for a real-channel clip.
 4. After submit: freeze this repo until Nov 15; iterate in a fork/copy.

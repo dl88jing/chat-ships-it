@@ -66,7 +66,7 @@ With `OPENAI_API_KEY` set, `/api/build` generates fresh HTML server-side. Withou
 | 2:25 | This file + MAIN thread `/status` session ID |
 | 2:50 | Outro — repo + live demo URL |
 
-Demo video (YouTube): https://youtu.be/ghyZRheHwsg
+Demo video (YouTube): https://youtu.be/dPa2fA3ui2Y
 
 ## 4. AGENTS.md
 
