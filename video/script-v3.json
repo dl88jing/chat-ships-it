@@ -1,0 +1,22 @@
+[
+  {
+    "id": "vo_hook",
+    "text": "Chat Ships It. Real Twitch chat in. Chat votes. Codex ships it live."
+  },
+  {
+    "id": "vo_live",
+    "text": "On the left, a real live Twitch channel. On the right, our slash live page, connected anonymously to Twitch I R C — no Client ID, no secrets. Real chat lines arrive and feed the vote tally."
+  },
+  {
+    "id": "vo_ship",
+    "text": "Chat votes which feature to ship. We approve the leader, and Codex builds a sandboxed overlay widget — plan, diff, tests, then hot-load — credited to chat."
+  },
+  {
+    "id": "vo_codex",
+    "text": "We also used Codex to build this project. Session I D zero one a one nine five nine two, documented in docs slash CODEX.md. Codex is the build tool and the game mechanic."
+  },
+  {
+    "id": "vo_outro",
+    "text": "Try it at chat-ships-it.vercel.app slash live. Chat Ships It, by Green Robin Labs, for the Codex x TwitchCon Hackathon."
+  }
+]
